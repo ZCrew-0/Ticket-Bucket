@@ -1,0 +1,49 @@
+<!-- HEADER DESKTOP-->
+<header class="header-desktop3 d-none d-lg-block">
+    <div class="section__content section__content--p35">
+        <div class="header3-wrap">
+            <div class="header__logo">
+                <h1 style="color:beige">Ticket Bucket</h1>
+            </div>
+            <div class="header__navbar">
+                <ul class="list-unstyled">
+                    <li class="has-sub">
+                        <a [routerLink] = "['/user-account']">
+                            <i class="fab fa-servicestack"></i>
+                            <span class="bot-line"></span>Travel Schedule</a>
+                        <ul class="header3-sub-list list-unstyled">
+                          <li>
+                            <a >Train Shedule</a>
+                          </li>
+                          <li>
+                            <a >Bus Shedule</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a [routerLink] = "['/user-account']">
+                            <i class="fas fa-copy"></i>
+                            <span class="bot-line"></span>View Map</a>
+                        
+                    </li>
+                    <li class="has-sub">
+                        <a [routerLink] = "['/user-account']">
+                            <i class="far fa-user"></i>
+                            <span class="bot-line"></span>Settings</a>
+                        <ul class="header3-sub-list list-unstyled">
+                            <li>
+                                <a [routerLink] = "['/edituser']">Edit Profile</a>
+                            </li>
+                            <li>
+                                <!-- <a [routerLink]="['/']">Logout</a> -->
+                                <a *ngIf="authService.loggedIn()" class="nav-link"  href="" (click)="logoutUser()">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</header>
+<!-- END HEADER DESKTOP-->
